@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+  application:
+      name: depart-consumer
+logging:
+  pattern:
+    console: -%level %msg%n
+  level:
+    root: info
