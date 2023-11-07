@@ -1,0 +1,26 @@
+server:
+  port: 9000
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: gg
+          uri: https://google.com
+          predicates:
+            - Path=/gg
+        - id: re_route
+          uri: https://jd.com
+          predicates:
+              - Path=/jd
+#        - id: taobao
+#            uri: https://taobao.com
+#            predicates:
+#              - Path=/tb
+
+#  application:
+#      name: depart-consumer
+logging:
+  pattern:
+    console: -%level %msg%n
+  level:
+    root: info

@@ -1,0 +1,9 @@
+server:
+  port: 9000
+
+
+logging:
+  pattern:
+    console: -%level %msg%n
+  level:
+    root: info

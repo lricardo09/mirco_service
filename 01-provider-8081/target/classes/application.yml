@@ -17,8 +17,21 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        file-extension: yml
+  config:
+    import:
+      - optional:nacos:${spring.application.name}-${my.conf.name}.${spring.cloud.nacos.config.file-extension}
+  profiles:
+    active: dev
   application:
     name: depart-provider
+my:
+  conf:
+    name: dev
 server:
   port: 8081
 logging:

@@ -1,5 +1,6 @@
 package com.abc.bean;
 
+import com.abc.service.DepartService;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,4 +16,5 @@ public class Depart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
 }
